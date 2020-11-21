@@ -17,8 +17,16 @@
     	mackytext =  mackytext + '\n' + document.getElementById('origin').value.replace(/。/g, suffix[suffixNo]);
         document.getElementById('mackytext').value = mackytext;
     }
-
+    function tweet() {
+        var left = Math.round(window.screen.width / 2 - 275);
+        var top = (window.screen.height > 420) ? Math.round(window.screen.height / 2 - 210) : 0;
+        window.open(
+            "https://twitter.com/intent/tweet?text=" + encodeURIComponent(document.getElementById("mackytext").value + " at: https://e99h2121.github.io/breakthrough-generator/" ),
+            null,
+            "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=550,height=420,left=" + left + ",top=" + top);
+    }
 </script>
+
 <TABLE>
   <TBODY>
     <TR>
@@ -50,5 +58,10 @@
         <p><textarea cols="80" rows="10" id="mackytext">ここに表示されるのですぞ。</textarea></p></TD>
     </TR>
 </TABLE>
+<HR>
+
+<button id="tweet" onclick="tweet();">結果をTweetするのですぞ。</button> 
+
 </body>
 </html>
+
