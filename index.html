@@ -1,0 +1,54 @@
+<html>
+<body>
+<script type="text/javascript">
+    function breakthrough() {
+        const messages = ['問題解決こそが仕事でありますぞ。',
+                          '本当の仕事とは、何か大きな問題に直面したときから始まる。',
+                          'プロ、もしくはプロであるべきポジションの仕事人の無自覚や無神経さを「まぬけ」と呼びます。',
+                          '例えば「どこでもつながる携帯電話」というのを考えるとしましょう。これは理想として言えば、世界中のどこに行ってもつながる、地下だろうが高い山のてっぺんだろうが、太平洋のど真ん中だろうが通話ができるっていうのが理想じゃありませんか？'];
+        const messageNo = Math.floor( Math.random() * messages.length);
+        
+        const suffix = ['ではありますまいか。',
+                          'ぞ。'];
+        const suffixNo = Math.floor( Math.random() * suffix.length);
+
+        var mackytext;
+        mackytext =  messages[messageNo] + '\n';
+    	mackytext =  mackytext + '\n' + document.getElementById('origin').value.replace(/。/g, suffix[suffixNo]);
+        document.getElementById('mackytext').value = mackytext;
+    }
+
+</script>
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD><b>文章を貼り付ける</b></TD>
+    </TR>
+    <TR>
+      <TD>
+      <FONT size="-1">対象を貼付るのですぞ。</FONT>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD><textarea cols="80" rows="5" id="origin"></textarea></TD>
+    </TR>
+    <TR>
+      <TD>
+        <p><input type="button" value="ブレイクスルーする" onclick="breakthrough();"></p>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<HR>
+<TABLE>
+    <TR>
+      <TD>
+        <p><textarea cols="80" rows="10" id="mackytext">ここに表示されます</textarea></p></TD>
+    </TR>
+</TABLE>
+</body>
+</html>
