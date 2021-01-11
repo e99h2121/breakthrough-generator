@@ -5,26 +5,26 @@
         var conv = "";
         for (const elem of segs) {
             var str = elem;
-            str = str.replace("\n^", "B\n^");
-            str = str.replace("@", "B");
-            str = str.replace("‚Å‚·", "‚Å‚·‚¼");
-            str = str.replace("‚Å‚µ‚½", "‚Å‚µ‚½‚¼");
-            str = str.replace("‚Ü‚·", "‚Ü‚·‚Ü‚¢‚©");
-            str = str.replace("‚³‚¢", "‚³‚¢‚Å‚·‚¼");
-            str = str.replace("‚½", "‚½‚Ì‚Å‚·‚¼");
-            str = str.replace("B", "‚Å‚ ‚è‚Ü‚·‚Ü‚¢‚©B");
+            str = str.replace("\n^", "ã€‚\n^");
+            str = str.replace("ã€€", "ã€‚");
+            str = str.replace("ã§ã™", "ã§ã™ã");
+            str = str.replace("ã§ã—ãŸ", "ã§ã—ãŸã");
+            str = str.replace("ã¾ã™", "ã¾ã™ã¾ã„ã‹");
+            str = str.replace("ã•ã„", "ã•ã„ã§ã™ã");
+            str = str.replace("ãŸ", "ãŸã®ã§ã™ã");
+            str = str.replace("ã€‚", "ã§ã‚ã‚Šã¾ã™ã¾ã„ã‹ã€‚");
             conv = conv + str;
         }
 
-        const messages = ['–â‘è‰ğŒˆ‚±‚»‚ªd–‚Å‚ ‚è‚Ü‚·‚¼B',
-                          '–{“–‚Ìd–‚Æ‚ÍA‰½‚©‘å‚«‚È–â‘è‚É’¼–Ê‚µ‚½‚Æ‚«‚©‚çn‚Ü‚éB',
-                          'ƒvƒA‚à‚µ‚­‚Íƒvƒ‚Å‚ ‚é‚×‚«ƒ|ƒWƒVƒ‡ƒ“‚Ìd–l‚Ì–³©Šo‚â–³_Œo‚³‚ğu‚Ü‚Ê‚¯v‚ÆŒÄ‚Ñ‚Ü‚·B',
-                          '—á‚¦‚Îu‚Ç‚±‚Å‚à‚Â‚È‚ª‚éŒg‘Ñ“d˜bv‚Æ‚¢‚¤‚Ì‚ğl‚¦‚é‚Æ‚µ‚Ü‚µ‚å‚¤B‚±‚ê‚Í—‘z‚Æ‚µ‚ÄŒ¾‚¦‚ÎA¢ŠE’†‚Ì‚Ç‚±‚És‚Á‚Ä‚à‚Â‚È‚ª‚éA’n‰º‚¾‚ë‚¤‚ª‚‚¢R‚Ì‚Ä‚Á‚Ø‚ñ‚¾‚ë‚¤‚ªA‘¾•½—m‚Ì‚Ç^‚ñ’†‚¾‚ë‚¤‚ª’Ê˜b‚ª‚Å‚«‚é‚Á‚Ä‚¢‚¤‚Ì‚ª—‘z‚¶‚á‚ ‚è‚Ü‚¹‚ñ‚©H'];
+        const messages = ['å•é¡Œè§£æ±ºã“ããŒä»•äº‹ã§ã‚ã‚Šã¾ã™ãã€‚',
+                          'æœ¬å½“ã®ä»•äº‹ã¨ã¯ã€ä½•ã‹å¤§ããªå•é¡Œã«ç›´é¢ã—ãŸã¨ãã‹ã‚‰å§‹ã¾ã‚‹ã€‚',
+                          'ãƒ—ãƒ­ã€ã‚‚ã—ãã¯ãƒ—ãƒ­ã§ã‚ã‚‹ã¹ããƒã‚¸ã‚·ãƒ§ãƒ³ã®ä»•äº‹äººã®ç„¡è‡ªè¦šã‚„ç„¡ç¥çµŒã•ã‚’ã€Œã¾ã¬ã‘ã€ã¨å‘¼ã³ã¾ã™ã€‚',
+                          'ä¾‹ãˆã°ã€Œã©ã“ã§ã‚‚ã¤ãªãŒã‚‹æºå¸¯é›»è©±ã€ã¨ã„ã†ã®ã‚’è€ƒãˆã‚‹ã¨ã—ã¾ã—ã‚‡ã†ã€‚ã“ã‚Œã¯ç†æƒ³ã¨ã—ã¦è¨€ãˆã°ã€ä¸–ç•Œä¸­ã®ã©ã“ã«è¡Œã£ã¦ã‚‚ã¤ãªãŒã‚‹ã€åœ°ä¸‹ã ã‚ã†ãŒé«˜ã„å±±ã®ã¦ã£ãºã‚“ã ã‚ã†ãŒã€å¤ªå¹³æ´‹ã®ã©çœŸã‚“ä¸­ã ã‚ã†ãŒé€šè©±ãŒã§ãã‚‹ã£ã¦ã„ã†ã®ãŒç†æƒ³ã˜ã‚ƒã‚ã‚Šã¾ã›ã‚“ã‹ï¼Ÿ'];
         const messageNo = Math.floor( Math.random() * messages.length);
         //const suffixNo = Math.floor( Math.random() * suffix.length);
 
         var mackytext = "";
-    	//mackytext =  mackytext + '\n' + document.getElementById('origin').value.replace(/B/g, suffix[suffixNo]);
+    	//mackytext =  mackytext + '\n' + document.getElementById('origin').value.replace(/ã€‚/g, suffix[suffixNo]);
     	mackytext =  conv + '\n';
         mackytext =  mackytext + messages[messageNo] + '\n';
     	document.getElementById('mackytext').value = mackytext;
